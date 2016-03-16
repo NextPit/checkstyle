@@ -5,13 +5,15 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: Fonpit Checks (fonpit-commons)
+    Checkstyle-Configuration: Fonpit Checks
     Description: none
 -->
 <module name="Checker">
   <property name="severity" value="error"/>
   <property name="charset" value="UTF-8"/>
+  <module name="SuppressWarningsFilter" />
   <module name="TreeWalker">
+    <module name="SuppressWarningsHolder" />
     <module name="MissingDeprecated"/>
     <module name="AnnotationUseStyle"/>
     <module name="MissingOverride"/>
@@ -44,9 +46,9 @@
     <module name="TypeName"/>
     <module name="AvoidStarImport"/>
     <module name="AvoidStaticImport"/>
-    <module name="IllegalImport"/>
+<!--    <module name="IllegalImport"/> -->
     <module name="ImportOrder">
-      <property name="groups" value="java,javax,org,com,de.fonpit"/>
+      <property name="groups" value="java,javax,org,com,de.androidpit,de.fonpit"/>
       <property name="separated" value="true"/>
     </module>
     <module name="RedundantImport"/>
@@ -168,7 +170,7 @@
     <module name="AvoidEscapedUnicodeCharacters"/>
     <module name="AbbreviationAsWordInName">
       <property name="allowedAbbreviationLength" value="4"/>
-      <property name="allowedAbbreviations" value="HHMMSS,XHTML"/>
+      <property name="allowedAbbreviations" value="HHMMSS,XHTML,ASCII,HTMLSSL,URLSSL,EUIBAN,EUBIC"/>
     </module>
     <module name="VariableDeclarationUsageDistance"/>
 <!-- New checks in Checkstyle 6.0 -->
@@ -193,9 +195,9 @@
     <property name="format" value="[^\*]\s$"/>
     <property name="message" value="Line has trailing spaces."/>
   </module>
-  <module name="SuppressionFilter">
-    <property name="file" value="${basedir}/config/checkstyle/checkstyle-suppressions.xml"/>
-  </module>
+<!--  <module name="SuppressionFilter"> -->
+<!--    <property name="file" value="${basedir}/config/checkstyle/checkstyle-suppressions.xml"/> -->
+<!--  </module> -->
   <module name="RegexpHeader">
     <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) Fonpit AG$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n\n"/>
   </module>
