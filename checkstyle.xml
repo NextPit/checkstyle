@@ -70,8 +70,10 @@
     </module>
     
     <!-- TODO: set to 50! -->
-    <module name="MethodLength"/>
-    
+    <module name="MethodLength">
+      <property name="max" value="50"/>
+    </module>
+      
     <!-- now there is an info if we have more than 7 and an error with more than 12 -->
     <module name="ParameterNumber">
       <property name="severity" value="info"/>
