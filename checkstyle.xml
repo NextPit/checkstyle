@@ -71,7 +71,7 @@
     
     <!-- TODO: set to 50! -->
     <module name="MethodLength">
-      <property name="max" value="50"/>
+      <property name="max" value="60"/>
     </module>
       
     <!-- now there is an info if we have more than 7 and an error with more than 12 -->
