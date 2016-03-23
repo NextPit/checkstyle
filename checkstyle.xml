@@ -94,9 +94,8 @@
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     
-    <!-- TODO: set to 50! -->
     <module name="MethodLength">
-      <property name="max" value="60"/>
+      <property name="max" value="${fonpit.checkstyle.methodlength}" default="50"/>
     </module>
       
     <!-- now there is an info if we have more than 7 and an error with more than 12 -->
