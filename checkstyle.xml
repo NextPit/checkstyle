@@ -195,7 +195,11 @@
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="JavaNCSS"/>
+    
+    <!-- TODO: set to default-->
+    <module name="JavaNCSS">
+      <property name="methodMaximum" value="60"/>
+    </module>
     <module name="ArrayTypeStyle"/>
     <module name="FinalParameters">
       <property name="severity" value="ignore"/>
