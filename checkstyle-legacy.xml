@@ -70,7 +70,7 @@
       <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.mockito.Matchers.*, org.mockito.Mockito.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
     </module>
     
-    <!-- suppressions do not work with annotations -->
+    <!-- TODO: fix that one file -->
     <!-- <module name="IllegalImport"/> -->
     
     <module name="ImportOrder">
@@ -95,7 +95,7 @@
     </module>
     
     <module name="MethodLength">
-      <property name="max" value="${fonpit.checkstyle.methodlength}" default="50"/>
+      <property name="max" value="150"/>
     </module>
       
     <!-- now there is an info if we have more than 7 and an error with more than 12 -->
@@ -196,7 +196,6 @@
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     
-    <!-- TODO: set to default-->
     <module name="JavaNCSS">
       <property name="methodMaximum" value="60"/>
     </module>
@@ -254,7 +253,6 @@
     <property name="message" value="Line has trailing spaces."/>
   </module>
   
-  <!-- TODO: only check copyright header, not package for better inter IDE compatibility? OR: check for possibility with GIT!!! -->
   <module name="RegexpHeader">
     <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) Fonpit AG$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n\n"/>
   </module>
