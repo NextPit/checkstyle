@@ -70,7 +70,8 @@
       <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.mockito.Matchers.*, org.mockito.Mockito.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
     </module>
     
-    <module name="IllegalImport"/>
+    <!-- suppressions do not work with annotations -->
+    <!-- <module name="IllegalImport"/> -->
     
     <module name="ImportOrder">
       <property name="groups" value="java,javax,org,com,edu,lombok,de,de.androidpit,de.fonpit"/>
@@ -94,12 +95,19 @@
     </module>
     
     <module name="MethodLength">
-      <property name="max" value="50"/>
+      <property name="max" value="${fonpit.checkstyle.methodlength}" default="50"/>
     </module>
       
-    <!-- error at more that 7 parameters -->
-    <module name="ParameterNumber"/>
-
+    <!-- now there is an info if we have more than 7 and an error with more than 12 -->
+    <module name="ParameterNumber">
+      <property name="severity" value="info"/>
+    </module>
+    <!-- Maximum is currently 12, never use more! -->
+    <module name="ParameterNumber">
+      <property name="max" value="12"/>
+      <property name="tokens" value="METHOD_DEF"/>
+    </module>
+    
     <module name="OuterTypeNumber"/>
     <module name="MethodCount"/>
     <module name="EmptyForInitializerPad"/>
@@ -187,7 +195,11 @@
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="JavaNCSS"/>
+    
+    <!-- TODO: set to default-->
+    <module name="JavaNCSS">
+      <property name="methodMaximum" value="60"/>
+    </module>
     <module name="ArrayTypeStyle"/>
     <module name="FinalParameters">
       <property name="severity" value="ignore"/>
@@ -235,13 +247,14 @@
   <module name="Translation"/>
 
   <!-- we don't check the file length because it cannot be suppressed with annotations, and we had only a few files that were too long -->
-  <module name="FileLength"/>
+  <!--  <module name="FileLength"/> -->
   <module name="FileTabCharacter"/>
   <module name="RegexpSingleline">
     <property name="format" value="[^\*]\s$"/>
     <property name="message" value="Line has trailing spaces."/>
   </module>
   
+  <!-- TODO: only check copyright header, not package for better inter IDE compatibility? OR: check for possibility with GIT!!! -->
   <module name="RegexpHeader">
     <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) Fonpit AG$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n\n"/>
   </module>
