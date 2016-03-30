@@ -38,7 +38,7 @@
     <module name="PackageAnnotation"/>
     <module name="JavadocMethod">
       <property name="suppressLoadErrors" value="true"/>
-      <property name="allowedAnnotations" value="Override, Test, Before,After,BeforeClass,AfterClass"/>
+      <property name="allowedAnnotations" value="Override,Bean,Test,Before,After,BeforeClass,AfterClass"/>
       <property name="scope" value="protected"/>
       <property name="minLineCount" value="2"/>
     </module>
