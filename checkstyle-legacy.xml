@@ -11,6 +11,7 @@
 <module name="Checker">
   <property name="severity" value="warning"/>
   <property name="charset" value="UTF-8"/>
+
   <!-- google: <property name="fileExtensions" value="java, properties, xml"/> -->
   
   <!-- google: <module name="FileTabCharacter"><property name="eachLine" value="true"/></module> NO TABS AT ALL -->
@@ -38,7 +39,7 @@
     <module name="PackageAnnotation"/>
     <module name="JavadocMethod">
       <property name="suppressLoadErrors" value="true"/>
-      <property name="allowedAnnotations" value="Override, Test, Before,After,BeforeClass,AfterClass"/>
+      <property name="allowedAnnotations" value="Override,Bean,Test,Before,After,BeforeClass,AfterClass"/>
       <property name="scope" value="protected"/>
       <property name="minLineCount" value="2"/>
     </module>
@@ -67,7 +68,7 @@
     <module name="TypeName"/>
     <module name="AvoidStarImport"/>
     <module name="AvoidStaticImport">
-      <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.mockito.Matchers.*, org.mockito.Mockito.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
+      <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.hamcrest.MatcherAssert.*, org.hamcrest.core.Is.*, org.hamcrest.core.IsNot.*, org.hamcrest.core.StringContains.*, org.mockito.Matchers.*, org.mockito.Mockito.*, com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
     </module>
     
     <module name="IllegalImport"/>
@@ -245,7 +246,7 @@
   <module name="Translation"/>
 
   <!-- we don't check the file length because it cannot be suppressed with annotations, and we had only a few files that were too long -->
-  <!--  <module name="FileLength"/> -->
+  <module name="FileLength"/>
   <module name="FileTabCharacter"/>
   <module name="RegexpSingleline">
     <property name="format" value="[^\*]\s$"/>
