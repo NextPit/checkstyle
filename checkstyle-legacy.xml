@@ -9,7 +9,7 @@
     Description: none
 -->
 <module name="Checker">
-  <property name="severity" value="error"/> <!-- google: warning -->
+  <property name="severity" value="warning"/>
   <property name="charset" value="UTF-8"/>
   <!-- google: <property name="fileExtensions" value="java, properties, xml"/> -->
   
