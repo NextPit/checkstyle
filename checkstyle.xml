@@ -130,8 +130,7 @@
 <!--    <module name="RightCurly">
       <property name="option" value="alone"/>
     </module>-->
-    <!-- google: -->
-    <module name="RightCurly"/>
+    <!-- google: <module name="RightCurly"/> We allow the right curly to be alone; we enforce it only for the statements listed below -->
     <module name="RightCurly">
       <property name="option" value="alone"/>
       <property name="tokens" value="CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, STATIC_INIT, INSTANCE_INIT"/>
