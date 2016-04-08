@@ -129,8 +129,14 @@
     <module name="EmptyBlock">
       <property name="option" value="text"/>
     </module>
+    <!-- New line before all but LAMBDA -->
     <module name="LeftCurly">
-      <property name="option" value="nl"/> <!-- google: <property name="maxLineLength" value="100"/> -->
+      <property name="option" value="nl"/>
+      <property name="tokens" value="INTERFACE_DEF,CLASS_DEF,ANNOTATION_DEF,ENUM_DEF,CTOR_DEF,METHOD_DEF,ENUM_CONSTANT_DEF,LITERAL_WHILE,LITERAL_TRY,LITERAL_CATCH,LITERAL_FINALLY,LITERAL_SYNCHRONIZED,LITERAL_SWITCH,LITERAL_DO,LITERAL_IF,LITERAL_ELSE,LITERAL_FOR"/>
+    </module>
+    <!-- End of line before LAMBDA -->
+    <module name="LeftCurly">
+      <property name="tokens" value="LAMBDA"/>
     </module>
     <module name="NeedBraces"/>
     <module name="RightCurly">
