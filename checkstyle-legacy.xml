@@ -13,6 +13,7 @@
   <property name="charset" value="UTF-8"/>
 
   <!-- google: <property name="fileExtensions" value="java, properties, xml"/> -->
+  <property name="fileExtensions" value="java"/>
   
   <!-- google: <module name="FileTabCharacter"><property name="eachLine" value="true"/></module> NO TABS AT ALL -->
   
