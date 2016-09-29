@@ -69,7 +69,7 @@
     <module name="TypeName"/>
     <module name="AvoidStarImport"/>
     <module name="AvoidStaticImport">
-      <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.hamcrest.MatcherAssert.*, org.hamcrest.core.Is.*, org.hamcrest.core.IsNot.*, org.hamcrest.core.StringContains.*, org.mockito.Matchers.*, org.mockito.Mockito.*, com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
+      <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.hamcrest.MatcherAssert.*, org.hamcrest.core.Is.*, org.hamcrest.core.IsNot.*, org.hamcrest.core.StringContains.*, org.mockito.Matchers.*, org.mockito.Mockito.*, com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.ESTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
     </module>
     
     <module name="IllegalImport"/>
