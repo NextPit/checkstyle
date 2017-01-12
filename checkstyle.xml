@@ -11,18 +11,18 @@
 <module name="Checker">
   <property name="severity" value="error"/> <!-- google: warning -->
   <property name="charset" value="UTF-8"/>
-  
+
   <!-- google: <property name="fileExtensions" value="java, properties, xml"/> -->
   <property name="fileExtensions" value="java"/>
-  
+
   <!-- google: <module name="FileTabCharacter"><property name="eachLine" value="true"/></module> NO TABS AT ALL -->
-  
+
   <module name="SuppressWarningsFilter" />
   <module name="TreeWalker">
-    
+
     <!-- google: <module name="NoLineWrap"/> DONT WRAP IMPORT AND PACKAGE-->
     <!-- google: <module name="SeparatorWrap">... -->
-    <!-- google: 
+    <!-- google:
     <module name="Indentation">
       <property name="basicOffset" value="2"/>
       <property name="braceAdjustment" value="0"/>
@@ -32,7 +32,7 @@
       <property name="arrayInitIndent" value="2"/>
     </module>
     -->
-    
+
     <module name="SuppressWarningsHolder" />
     <module name="MissingDeprecated"/>
     <module name="AnnotationUseStyle"/>
@@ -74,9 +74,9 @@
     <module name="AvoidStaticImport">
       <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.hamcrest.MatcherAssert.*, org.hamcrest.core.Is.*, org.hamcrest.core.IsNot.*, org.hamcrest.core.StringContains.*, org.mockito.Matchers.*, org.mockito.Mockito.*, com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.ESTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
     </module>
-    
+
     <module name="IllegalImport"/>
-    
+
     <module name="ImportOrder">
       <property name="groups" value="java,javax,org,com,edu,lombok,de,de.androidpit,de.fonpit"/>
       <property name="separated" value="true"/>
@@ -89,7 +89,7 @@
       <property name="customImportOrderRules" value="STATIC###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE"/>
     </module>
     -->
-    
+
     <module name="RedundantImport"/>
     <module name="UnusedImports"/>
     <module name="AnonInnerLength"/>
@@ -97,11 +97,11 @@
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    
+
     <module name="MethodLength">
       <property name="max" value="50"/>
     </module>
-      
+
     <!-- error at more that 7 parameters -->
     <module name="ParameterNumber"/>
 
@@ -135,8 +135,8 @@
       <property name="option" value="alone"/>
       <property name="tokens" value="CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, STATIC_INIT, INSTANCE_INIT"/>
     </module>
-    
-    
+
+
     <module name="AvoidInlineConditionals">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
@@ -218,7 +218,7 @@
     <!-- New checks in Checkstyle 6.0 -->
     <module name="AnnotationLocation"/>
     <module name="AtclauseOrder"/>
-    
+
     <!-- This works differently on Windows/Linux and in the Eclipse/Maven plugins:
      In Windows Eclipse, a trailing space is allowed, in Linux Eclipse it's sometimes allowed (probably depending on the line ending character used), in Maven it's not allowed
     <module name="JavadocParagraph"/> -->
@@ -228,7 +228,7 @@
     <module name="SingleLineJavadoc"/>
     <module name="NonEmptyAtclauseDescription"/>
   </module>
-  
+
   <!-- we don't have package-info.java files mandatory anymore, because we had an issue with duplicated package infos in src and test folders for same packages -->
   <!--   <module name="JavadocPackage"/> -->
   <module name="NewlineAtEndOfFile">
@@ -243,8 +243,12 @@
     <property name="format" value="[^\*]\s$"/>
     <property name="message" value="Line has trailing spaces."/>
   </module>
-  
+
   <module name="RegexpHeader">
     <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) Fonpit AG$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n\n"/>
+  </module>
+  <module name="SuppressionFilter">
+    <property name="file" value="https://gitlab.fonpit.de/fonpit-common/fonpit-checkstyle/raw/master/test-suppressions.xml"/>
+    <property name="optional" value="false"/>
   </module>
 </module>
