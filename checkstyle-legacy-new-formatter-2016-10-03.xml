@@ -259,4 +259,8 @@
   <module name="RegexpHeader">
     <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) Fonpit AG$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n\n"/>
   </module>
+  <module name="SuppressionFilter">
+    <property name="file" value="https://gitlab.fonpit.de/fonpit-common/fonpit-checkstyle/raw/master/test-suppressions.xml"/>
+    <property name="optional" value="false"/>
+  </module>
 </module>
