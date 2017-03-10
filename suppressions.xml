@@ -5,10 +5,13 @@
 "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
 
 <suppressions>
+  <!-- tests -->
   <suppress checks="AvoidStaticImport"
     files="src[\\/]test[\\/]java[\\/]"
   />
-  <suppress checks="*"
+
+  <!-- target folder -->
+  <suppress checks=".*"
     files="target[\\/]"
   />
 </suppressions>
