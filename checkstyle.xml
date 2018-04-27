@@ -72,7 +72,7 @@
     <module name="TypeName"/>
     <module name="AvoidStarImport"/>
     <module name="AvoidStaticImport">
-      <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.hamcrest.MatcherAssert.*, org.hamcrest.core.Is.*, org.hamcrest.core.IsNot.*, org.hamcrest.core.StringContains.*, org.mockito.Matchers.*, org.mockito.Mockito.*, com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.ESTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*"/>
+      <property name="excludes" value="org.junit.Assert.*, org.hamcrest.CoreMatchers.*, org.hamcrest.Matchers.*, org.hamcrest.MatcherAssert.*, org.hamcrest.core.Is.*, org.hamcrest.core.IsNot.*, org.hamcrest.core.StringContains.*, org.hamcrest.collection.IsIterableContainingInAnyOrder.*, org.mockito.Matchers.*, org.mockito.Mockito.*, org.powermock.api.mockito.PowerMockito.*, com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.*, org.elasticsearch.index.query.QueryBuilders.*, org.elasticsearch.search.aggregations.AggregationBuilders.*, org.elasticsearch.test.ESIntegTestCase.*, org.elasticsearch.test.ESTestCase.*, org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*, org.springframework.test.web.servlet.setup.MockMvcBuilders.*, org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*, org.springframework.test.web.servlet.result.MockMvcResultMatchers.*"/>
     </module>
 
     <module name="IllegalImport"/>
@@ -246,10 +246,6 @@
 
   <module name="RegexpHeader">
     <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) Fonpit AG$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n"/>
-  </module>
-  <module name="SuppressionFilter">
-    <property name="file" value="https://gitlab.fonpit.de/fonpit-common/fonpit-checkstyle/raw/master/suppressions.xml"/>
-    <property name="optional" value="false"/>
   </module>
 
 </module>
