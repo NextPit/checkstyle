@@ -97,10 +97,6 @@
     <module name="RedundantImport"/>
     <module name="UnusedImports"/>
     <module name="AnonInnerLength"/>
-    <module name="LineLength">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
 
     <module name="MethodLength">
       <property name="max" value="50"/>
@@ -231,6 +227,11 @@
     <module name="JavadocTagContinuationIndentation"/> -->
     <module name="SingleLineJavadoc"/>
     <module name="NonEmptyAtclauseDescription"/>
+  </module>
+
+  <module name="LineLength">
+    <property name="severity" value="ignore"/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
 
   <!-- we don't have package-info.java files mandatory anymore, because we had an issue with duplicated package infos in src and test folders for same packages -->
