@@ -262,6 +262,8 @@
       <property name="ignoreFinal" value="false"/>
       <!-- NextPit-specific: allow abbreviations up to 4 characters -->
       <property name="allowedAbbreviationLength" value="4"/>
+      <!-- NextPit-specific: allow some specific, even longer, abbreviations -->
+      <property name="allowedAbbreviations" value="HHMMSS,XHTML,ASCII,HTMLSSL,URLSSL,EUIBAN,EUBIC"/>
       <property name="tokens"
                value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
                     PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF, PATTERN_VARIABLE_DEF, RECORD_DEF,
