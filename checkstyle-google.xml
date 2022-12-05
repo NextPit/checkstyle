@@ -378,5 +378,17 @@
       <!-- The check is suppressed in the next line of code after the comment -->
       <property name="influenceFormat" value="1"/>
     </module>
+
+    <!-- NextPit-specific: enforces short methods -->
+    <module name="MethodLength">
+      <property name="tokens" value="METHOD_DEF"/>
+      <property name="max" value="50"/>
+      <property name="countEmpty" value="false"/>
+    </module>
+  </module>
+
+  <!-- NextPit-specific: enforces copyright header -->
+  <module name="RegexpHeader">
+    <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) (Fonpit AG|NextPit GmbH)$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n"/>
   </module>
 </module>
