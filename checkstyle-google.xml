@@ -403,7 +403,7 @@
 
   <!-- NextPit-specific: enforces copyright header -->
   <module name="RegexpHeader">
-    <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) (Fonpit AG|NextPit GmbH)$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n"/>
+    <property name="header" value="^/\*$\n^ \* ?$\n^ \* Copyright \(C\) (20\d\d|20\d\d-20\d\d) (Fonpit AG|NextPit GmbH|nextpit GmbH)$\n^ \* ?$\n^ \*/$\n\n(^package|^/\*\*)\n"/>
     <property name="fileExtensions" value="java"/>
   </module>
 </module>
